@@ -1,0 +1,12 @@
+# Environment files
+*.env
+to-do-backend/.env
+to-do-frontend/.env
+
+# Node modules
+node_modules/
+to-do-backend/node_modules/
+to-do-frontend/node_modules/
+
+# Logs
+*.log
