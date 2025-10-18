@@ -23,7 +23,7 @@ const registerUser = async (req, res) => {
             email,
             password: hashedPassword,
         });
-        console.log("user: ", user);
+        // console.log("user: ", user);
 
 
         // Send response with token

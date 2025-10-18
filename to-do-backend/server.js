@@ -12,11 +12,9 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // to parse JSON body
 
-// Routes (we'll create these files later)
+// Routes
 const authRoutes = require('./routes/authRoutes');
 const taskRoutes = require('./routes/taskRoutes');
-
-
 
 // Use routes
 app.use('/api/auth', authRoutes);

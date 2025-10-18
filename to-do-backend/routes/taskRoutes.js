@@ -1,13 +1,3 @@
-// const express = require('express');
-// const router = express.Router();
-
-// // Define your routes here
-// router.get('/tasks', (req, res) => {
-//   res.send('Tasks route');
-// });
-
-// module.exports = router;
-
 const express = require('express');
 const router = express.Router();
 
@@ -20,6 +10,7 @@ const {
   getTasks,
   updateTask,
   deleteTask,
+  aisuggest,
 } = require('../controllers/taskController');
 
 // ➕ Create a task
@@ -33,5 +24,8 @@ router.put('/:id', protect, updateTask);
 
 // ❌ Delete a task by ID
 router.delete('/:id', protect, deleteTask);
+
+// AI suggestion by title and description
+router.post('/ai-suggestion', protect, aisuggest);
 
 module.exports = router;
